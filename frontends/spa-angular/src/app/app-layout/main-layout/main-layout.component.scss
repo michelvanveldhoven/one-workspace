@@ -1,0 +1,59 @@
+@import '~@angular/material/theming';
+
+@mixin main-layout-component-theme($theme) {
+  // retrieve variables from theme 
+  // (all possible variables, use only what you really need)
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+
+  #app-logo {
+    background: white;
+    border-radius: 50%;
+  }
+
+  #app-title {
+    margin-left: 6px;
+    color: white; // mat-color($background, text);
+  }
+
+  .sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav {
+    width: 200px;
+  }
+  
+  .sidenav .mat-toolbar {
+    background: inherit;
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    @include mat-elevation(6);
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  mat-icon {
+    color: white;
+  }
+
+  ws-toolbar-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  .ws-toolbar-button {
+    color: white;
+  }
+}
