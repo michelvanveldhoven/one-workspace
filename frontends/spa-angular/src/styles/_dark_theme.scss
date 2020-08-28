@@ -1,0 +1,10 @@
+@import "~@angular/material/theming";
+@import "./mvv_palette";
+
+@include mat-core();
+
+$primary: mat-palette($mvv-green, 500, 100, 900);
+$accent: mat-palette($mvv-purple);
+$warn: mat-palette($mat-red);
+
+$mvv-dark-theme: mat-dark-theme($primary, $accent, $warn);

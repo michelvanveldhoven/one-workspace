@@ -1,0 +1,5 @@
+@import '../app/app-layout/main-layout/main-layout.component.scss';
+
+@mixin mvv-app-components-theme($theme) {
+    @include main-layout-component-theme($theme);
+}
